@@ -1,0 +1,59 @@
+
+/* Center the main container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
+
+.product-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin: 20px;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+/* Additional styling for Card component */
+.card {
+  display: flex;
+  flex-direction: row;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+
+}
+
+
+/* Responsive design for Card component */
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    margin: 10px 0;
+    flex-direction: column;
+  }
+}
