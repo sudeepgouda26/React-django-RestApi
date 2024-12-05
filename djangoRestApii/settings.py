@@ -39,10 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Api',
-    'rest_framework'
+    'rest_framework',
+    'corsheaders',
+    
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -51,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 ROOT_URLCONF = 'djangoRestApii.urls'
 
@@ -72,7 +76,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'djangoRestApii.wsgi.application'
 
-
+CORS_ORIGIN_WHITELIST=[ 'http://localhost:5173' ]
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
